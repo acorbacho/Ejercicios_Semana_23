@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <title>FORMULARIO</title>
+</head>
+
+<body>
+  <form action="main.php" method="POST">
+    <fieldset style="background-color: rgb(152, 190, 224); width: 200px">
+      <legend style="text-align: center">
+        <fieldset style="background-color: rgb(152, 190, 224)">Registro</fieldset>
+      </legend>
+      <div class="div_nombre" style="font-size: xx-small;">
+        <input type="text" name="nombre" class="nombre" size="25" placeholder="Nombre"><br>
+        <div class="form_alert" style="height: 20px; font-size: 11px; color: red;"></div>
+      </div>
+      <div class="div_apellidos">
+        <input type="text" name="apellidos" id="apellidos" size="25" placeholder="Apellidos">
+        <div class="form_alert" style="height: 20px; font-size: 11px; color: red;"></div>
+      </div>
+      <div class="div_edad">
+        <input type="text" name="edad" size="1" id="edad" placeholder="Edad">
+        <div class="form_alert" style="height: 20px; font-size: 11px; color: red;"></div>
+      </div>
+      <div class="div_nota">
+        <input type="text" name="nota" size="1" id="nota" placeholder="Nota">
+        <div class="form_alert" style="height: 20px; font-size: 11px; color: red;"></div>
+      </div>
+      <button id="enviar" style="border-radius: 5%; font-weight: bold;">Enviar</button>
+      <button type="reset" style="border-radius: 5%; font-weight: bold;">Borrar formulario</button>
+    </fieldset>
+  </form>
+  <br>
+  <form action="consulta.php" method="GET">
+    <fieldset style="background-color: rgb(152, 190, 224); width: 200px">
+      <legend style="text-align: center">
+        <fieldset style="background-color: rgb(152, 190, 224)">Buscar alumno</fieldset>
+      </legend>
+      <div class="div_nombre" style="font-size: xx-small;">
+        <input type="text" name="nombre_search" class="nombre" size="25" placeholder="Nombre"><br>
+        <div class="form_alert" style="height: 20px; font-size: 11px; color: red;"></div>
+      </div>
+      <button id="recuperar" style="border-radius: 5%; font-weight: bold;">Recuperar alumno</button>
+    </fieldset>
+  </form>
+  <p id="response"></p>
+  <script src="main.js"></script>
+</body>
+
+</html>
